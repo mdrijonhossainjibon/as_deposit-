@@ -12,9 +12,7 @@ const transactionSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  timestamp: { default: Date },
-
-  // Add more fields as needed
+  timestamp: { type: Date, default: Date.now },
 });
 
 const Transaction = mongoose.model("Transaction", transactionSchema);
